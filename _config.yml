@@ -103,6 +103,6 @@ theme: fluid
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/ycldjx/ycldjx.github.io.git
+  repo: git@github.com:ycldjx/ycldjx.github.io.git
   branch: gh-pages
   message: update blog
