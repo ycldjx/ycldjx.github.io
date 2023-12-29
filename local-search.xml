@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>918_div4.md</title>
+    <link href="/2023/12/29/problem/918-div4-md/"/>
+    <url>/2023/12/29/problem/918-div4-md/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://codeforces.com/contest/1915/problem/E">E</a></p><p>找到一个连续的子段，使得下标是奇数的和等于下标是偶数的和<br></p><p>注意：（下标是奇数的数的个数 不一定 等于下标是偶数的数的个数）</p><p>思路：<br>奇数位加，偶数位减，结果放在<code>set</code><br><br>如果存在一段奇偶序列和相等，则该段奇加偶减为0, 相当于在<code>set</code>中,存入相同的数 ！<br></p><p>最后判断<code>set</code>是否等于n<br><br><code>set.size()</code>&lt;<code>n</code> : 存在; 反之,不存在</p><details><summary>code</summary><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><br><span class="hljs-type">int</span> n;<br>cin &gt;&gt; n;<br><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">s</span><span class="hljs-params">(n + <span class="hljs-number">1</span>)</span></span>;<br>set&lt;<span class="hljs-type">int</span>&gt; st&#123; (<span class="hljs-type">int</span>)<span class="hljs-number">0</span> &#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++)<br>&#123;<br><span class="hljs-type">int</span> x;<br>cin &gt;&gt; x;<br>s[i + <span class="hljs-number">1</span>] = s[i] + (i % <span class="hljs-number">2</span> ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>) * x;<br>st.<span class="hljs-built_in">insert</span>(s[i + <span class="hljs-number">1</span>]);<br>&#125;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= n; i++)<br>cout &lt;&lt; s[i] &lt;&lt; <span class="hljs-string">&#x27; &#x27;</span>;<br><br><span class="hljs-keyword">if</span> (st.<span class="hljs-built_in">size</span>() != n+<span class="hljs-number">1</span>)<br>cout &lt;&lt; <span class="hljs-string">&quot;YES\n&quot;</span>;<br><span class="hljs-keyword">else</span> cout &lt;&lt; <span class="hljs-string">&quot;NO\n&quot;</span>;<br></code></pre></td></tr></table></figure></details>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>problem.23_11_27.md</title>
     <link href="/2023/12/27/problem/problem-23-11-27-md/"/>
     <url>/2023/12/27/problem/problem-23-11-27-md/</url>
